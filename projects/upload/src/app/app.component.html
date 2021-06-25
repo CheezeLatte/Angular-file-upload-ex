@@ -1,0 +1,23 @@
+<div
+  class="file-input cursor"
+  [class.pointer]="!disabled"
+  appFileChooser
+  (filesChange)="handleFiles($event)"
+  accept="image/*"
+  [multiple]="false"
+  [disabled]="disabled"
+  [appBackgroundImage]="image || 'assets/images/no-image.jpg'"
+  appBackgroundPosition="center center"
+  appBackgroundSize="cover"
+>
+  <button class="close-btn" (click)="removeImage($event)" *ngIf="image">
+    &times;
+  </button>
+</div>
+
+<div
+  class="image"
+  appBackgroundImage="assets/images/puppy.jpg"
+  appBackgroundSize="cover"
+  appBackgroundPosition="center center"
+></div>
